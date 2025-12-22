@@ -1,0 +1,645 @@
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mobile-first CSS */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #E8DDD0;
+    color: #2C1810;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.screen {
+    display: none;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* Header */
+header {
+    background: rgba(244, 241, 235, 0.8);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    padding: 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(190, 169, 142, 0.25);
+    box-shadow: 0 4px 20px rgba(44, 24, 16, 0.06), 0 1px 3px rgba(44, 24, 16, 0.04);
+    position: relative;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 1.6em;
+    font-weight: 500;
+    margin: 0;
+    color: #2C1810;
+    line-height: 1.35;
+    padding: 0 80px;
+    letter-spacing: 0.02em;
+}
+
+/* Header del home con layout vertical */
+#home header {
+    flex-direction: column;
+    padding: 40px 20px;
+    background: rgba(244, 241, 235, 0.85);
+    border-bottom: 1px solid rgba(190, 169, 142, 0.25);
+}
+
+#home h1 {
+    padding: 0 20px;
+    font-size: 1.5em;
+    margin-bottom: 14px;
+    color: #2C1810;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(44, 24, 16, 0.08);
+}
+
+header p {
+    font-size: 1.05em;
+    margin: 0;
+    color: #5A6B5D;
+    font-weight: 400;
+    padding: 0 20px;
+    letter-spacing: 0.01em;
+}
+
+/* Separador decorativo */
+.divider {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #D4C5A9 20%, #BEA98E 50%, #D4C5A9 80%, transparent);
+    margin: 16px auto;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(212, 197, 169, 0.25);
+}
+
+/* Iconos Lucide */
+.btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btn-text {
+    flex: 1;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2;
+    flex-shrink: 0;
+    opacity: 0.85;
+}
+
+.icon-inline {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    margin-top: -2px;
+}
+
+.icon-back {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
+}
+
+/* Main content area */
+main {
+    flex: 1;
+    padding: 25px 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Botones principales del home */
+.action-btn {
+    display: block;
+    width: 100%;
+    min-height: 68px;
+    padding: 22px 24px;
+    margin: 0 0 16px 0;
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #2C1810;
+    background: rgba(244, 241, 235, 0.65);
+    border: 1px solid rgba(190, 169, 142, 0.35);
+    border-radius: 16px;
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    box-shadow: 0 4px 12px rgba(44, 24, 16, 0.06), 0 1px 3px rgba(44, 24, 16, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    position: relative;
+    overflow: hidden;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Botón de información destacado */
+.action-btn-primary {
+    background: rgba(212, 197, 169, 0.55);
+    border-color: rgba(212, 197, 169, 0.65);
+    font-weight: 600;
+    color: #2C1810;
+    box-shadow: 0 4px 14px rgba(212, 197, 169, 0.25), 0 1px 3px rgba(44, 24, 16, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+/* Botón que ocupa toda la línea */
+.action-btn-full {
+    margin-bottom: 24px;
+}
+
+/* Botón de emergencias */
+.action-btn-emergency {
+    background: rgba(160, 82, 45, 0.25);
+    border-color: rgba(160, 82, 45, 0.4);
+    font-weight: 600;
+    margin-top: 6px;
+    color: #2C1810;
+}
+
+.action-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.action-btn:hover::before {
+    left: 100%;
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+    background: rgba(244, 241, 235, 0.8);
+    border-color: rgba(190, 169, 142, 0.45);
+    box-shadow: 0 2px 6px rgba(44, 24, 16, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Cards de contenido */
+.card {
+    background: rgba(244, 241, 235, 0.7);
+    backdrop-filter: blur(35px) saturate(180%);
+    -webkit-backdrop-filter: blur(35px) saturate(180%);
+    border: 1px solid rgba(190, 169, 142, 0.3);
+    border-radius: 18px;
+    padding: 28px;
+    margin: 0 0 18px 0;
+    box-shadow: 0 4px 16px rgba(44, 24, 16, 0.06), 0 1px 3px rgba(44, 24, 16, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(44, 24, 16, 0.1), 0 2px 6px rgba(44, 24, 16, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    border-color: rgba(190, 169, 142, 0.4);
+}
+
+/* Cards importantes */
+.card-important {
+    border-color: rgba(212, 197, 169, 0.5);
+    background: rgba(212, 197, 169, 0.35);
+}
+
+/* Cards de emergencia */
+.card-emergency {
+    border-color: rgba(160, 82, 45, 0.4);
+    background: rgba(160, 82, 45, 0.15);
+}
+
+.card-emergency h2 {
+    color: #A0522D;
+}
+
+.card h2 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #2C1810;
+    letter-spacing: 0.01em;
+    line-height: 1.35;
+}
+
+.card p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin: 0 0 18px 0;
+    color: #2C1810;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+}
+
+/* Links dentro de cards */
+.map-link,
+.phone-link {
+    display: inline-block;
+    min-height: 48px;
+    padding: 15px 24px;
+    margin: 4px 8px 4px 0;
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #2C1810;
+    background: rgba(212, 197, 169, 0.55);
+    border: 1px solid rgba(212, 197, 169, 0.65);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.01em;
+    box-shadow: 0 3px 10px rgba(44, 24, 16, 0.08), 0 1px 3px rgba(44, 24, 16, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    position: relative;
+    overflow: hidden;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Botones de emergencia */
+.phone-link-emergency {
+    background: rgba(160, 82, 45, 0.35);
+    border-color: rgba(160, 82, 45, 0.5);
+    box-shadow: 0 3px 12px rgba(160, 82, 45, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    font-weight: 700;
+    font-size: 1.15em;
+    color: #2C1810;
+}
+
+.phone-link-emergency:active {
+    background: rgba(160, 82, 45, 0.45);
+}
+
+.map-link::after,
+.phone-link::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+}
+
+.map-link:active::after,
+.phone-link:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+.map-link:active,
+.phone-link:active {
+    transform: scale(0.97);
+    background: rgba(212, 197, 169, 0.7);
+    box-shadow: 0 2px 6px rgba(44, 24, 16, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Botón volver */
+.back-btn {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8em;
+    font-weight: 400;
+    color: #2C1810;
+    background: rgba(244, 241, 235, 0.75);
+    border: 1px solid rgba(190, 169, 142, 0.35);
+    border-radius: 14px;
+    padding: 0;
+    cursor: pointer;
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    box-shadow: 0 3px 10px rgba(44, 24, 16, 0.08), 0 1px 3px rgba(44, 24, 16, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    line-height: 1;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.back-btn:active {
+    transform: translateY(-50%) scale(0.95);
+    background: rgba(244, 241, 235, 0.85);
+    border-color: rgba(190, 169, 142, 0.45);
+    box-shadow: 0 2px 6px rgba(44, 24, 16, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .action-btn,
+    .back-btn,
+    .map-link,
+    .phone-link,
+    .card {
+        transition: none;
+    }
+    
+    .action-btn::before {
+        display: none;
+    }
+    
+    .map-link::after,
+    .phone-link::after {
+        display: none;
+    }
+}
+
+/* Focus states para accesibilidad de teclado */
+.action-btn:focus-visible,
+.back-btn:focus-visible,
+.map-link:focus-visible,
+.phone-link:focus-visible {
+    outline: 3px solid #BEA98E;
+    outline-offset: 3px;
+}
+
+/* Estilos para WiFi */
+.wifi-intro {
+    font-size: 0.92em;
+    color: #5A6B5D;
+    margin: 6px 0 20px 0;
+    line-height: 1.5;
+}
+
+.wifi-group {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(190, 169, 142, 0.25);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.wifi-group:last-of-type {
+    margin-bottom: 18px;
+}
+
+.wifi-group-title {
+    font-size: 0.9em;
+    color: #2C1810;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.01em;
+}
+
+.wifi-networks {
+    margin-bottom: 12px;
+}
+
+.wifi-network-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(190, 169, 142, 0.2);
+    border-radius: 10px;
+    margin-bottom: 6px;
+    transition: all 0.2s ease;
+}
+
+.wifi-network-item:last-child {
+    margin-bottom: 0;
+}
+
+.wifi-icon {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+    color: #5A6B5D;
+    flex-shrink: 0;
+}
+
+.network-name {
+    flex: 1;
+    font-size: 1.02em;
+    font-weight: 500;
+    color: #2C1810;
+    letter-spacing: 0.005em;
+}
+
+.copy-btn-small {
+    background: rgba(212, 197, 169, 0.35);
+    border: 1px solid rgba(212, 197, 169, 0.45);
+    border-radius: 8px;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    min-height: 32px;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.copy-btn-small:active {
+    transform: scale(0.95);
+    background: rgba(212, 197, 169, 0.5);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.copy-btn-small.copied {
+    background: rgba(90, 107, 93, 0.35);
+    border-color: rgba(90, 107, 93, 0.5);
+}
+
+.icon-copy-small {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2.5;
+    color: #2C1810;
+}
+
+.wifi-password-label {
+    font-size: 0.9em;
+    color: #2C1810;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.01em;
+}
+
+.wifi-value-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 11px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(190, 169, 142, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(44, 24, 16, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.wifi-value {
+    flex: 1;
+    font-size: 1.08em;
+    font-weight: 600;
+    color: #2C1810;
+    margin: 0;
+    letter-spacing: 0.01em;
+    word-break: break-all;
+    line-height: 1.3;
+}
+
+.copy-btn {
+    background: rgba(212, 197, 169, 0.45);
+    border: 1px solid rgba(212, 197, 169, 0.55);
+    border-radius: 10px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    min-height: 38px;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.copy-btn:active {
+    transform: scale(0.96);
+    background: rgba(212, 197, 169, 0.65);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.copy-btn.copied {
+    background: rgba(90, 107, 93, 0.45);
+    border-color: rgba(90, 107, 93, 0.65);
+}
+
+.icon-copy {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
+    color: #2C1810;
+}
+
+.wifi-note {
+    font-size: 0.85em;
+    color: #5A6B5D;
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.icon-inline-note {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Mejoras para pantallas más grandes */
+@media (min-width: 768px) {
+    main {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 35px 24px;
+    }
+    
+    h1 {
+        font-size: 1.9em;
+    }
+    
+    #home h1 {
+        font-size: 1.7em;
+    }
+    
+    .action-btn {
+        font-size: 1.35em;
+        padding: 24px 28px;
+        min-height: 72px;
+    }
+    
+    .card {
+        padding: 30px;
+    }
+    
+    .card h2 {
+        font-size: 1.45em;
+    }
+    
+    .map-link,
+    .phone-link {
+        padding: 16px 28px;
+        font-size: 1.1em;
+    }
+}
+
+/* Optimización para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    #home h1 {
+        font-size: 1.3em;
+        letter-spacing: 1.5px;
+    }
+    
+    .action-btn {
+        font-size: 1.15em;
+        padding: 18px 20px;
+    }
+    
+    h1 {
+        font-size: 1.4em;
+        padding: 0 70px;
+    }
+}

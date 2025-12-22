@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posada de Nono - Guía del Huésped</title>
+    <meta name="description" content="Guía digital para huéspedes de Posada de Nono. Encuentra restaurantes, actividades, servicios y toda la información que necesitas durante tu estadía.">
+    <meta name="theme-color" content="#BEA98E">
+    
+    <!-- Open Graph / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Posada de Nono - Guía del Huésped">
+    <meta property="og:description" content="Toda la información que necesitas durante tu estadía en Posada de Nono">
+    <meta property="og:site_name" content="Posada de Nono">
+    
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://maps.google.com">
+    <link rel="dns-prefetch" href="https://maps.google.com">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div id="home" class="screen active">
+        <header>
+            <h1>Posada de Nono</h1>
+            <div class="divider"></div>
+            <p>Bienvenido. Encuentra todo lo que necesitas aquí.</p>
+        </header>
+        <main>
+            <button class="action-btn action-btn-primary action-btn-full" data-target="info" aria-label="Información del complejo">
+                <span class="btn-content">
+                    <span class="btn-text">Información del Complejo</span>
+                    <i data-lucide="info" class="icon"></i>
+                </span>
+            </button>
+            <button class="action-btn" data-target="comer" aria-label="Dónde comer">
+                <span class="btn-content">
+                    <span class="btn-text">Dónde comer</span>
+                    <i data-lucide="utensils" class="icon"></i>
+                </span>
+            </button>
+            <button class="action-btn" data-target="hacer" aria-label="Qué hacer cerca">
+                <span class="btn-content">
+                    <span class="btn-text">Qué hacer cerca</span>
+                    <i data-lucide="mountain" class="icon"></i>
+                </span>
+            </button>
+            <button class="action-btn" data-target="servicios" aria-label="Servicios útiles">
+                <span class="btn-content">
+                    <span class="btn-text">Servicios útiles</span>
+                    <i data-lucide="shopping-bag" class="icon"></i>
+                </span>
+            </button>
+            <button class="action-btn" data-target="moverse" aria-label="Cómo moverse">
+                <span class="btn-content">
+                    <span class="btn-text">Cómo moverse</span>
+                    <i data-lucide="map-pin" class="icon"></i>
+                </span>
+            </button>
+            <button class="action-btn action-btn-emergency" data-target="emergencias" aria-label="Números de emergencia">
+                <span class="btn-content">
+                    <span class="btn-text">Emergencias</span>
+                    <i data-lucide="siren" class="icon"></i>
+                </span>
+            </button>
+        </main>
+    </div>
+
+    <div id="info" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver al inicio">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Información del Complejo</h1>
+        </header>
+        <main>
+            <div class="card card-important">
+                <h2>WiFi del Complejo</h2>
+                <p class="wifi-intro">Conectate según tu ubicación</p>
+                
+                <!-- Grupo 1: Redes principales -->
+                <div class="wifi-group">
+                    <p class="wifi-group-title">Redes:</p>
+                    <div class="wifi-networks">
+                        <div class="wifi-network-item">
+                            <i data-lucide="wifi" class="wifi-icon"></i>
+                            <span class="network-name">Posada_Nono_Principal</span>
+                        </div>
+                        <div class="wifi-network-item">
+                            <i data-lucide="wifi" class="wifi-icon"></i>
+                            <span class="network-name">Posada_Nono_Salon</span>
+                        </div>
+                        <div class="wifi-network-item">
+                            <i data-lucide="wifi" class="wifi-icon"></i>
+                            <span class="network-name">Posada_Nono_Piscina</span>
+                        </div>
+                    </div>
+                    <p class="wifi-password-label">Contraseña:</p>
+                    <div class="wifi-value-container">
+                        <p class="wifi-value" id="wifi-password-1">nono2024wifi</p>
+                        <button class="copy-btn" onclick="copyToClipboard('wifi-password-1', this)" aria-label="Copiar contraseña">
+                            <i data-lucide="copy" class="icon-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Grupo 2: Red de cabañas -->
+                <div class="wifi-group">
+                    <p class="wifi-group-title">Red:</p>
+                    <div class="wifi-networks">
+                        <div class="wifi-network-item">
+                            <i data-lucide="wifi" class="wifi-icon"></i>
+                            <span class="network-name">Posada_Nono_Cabañas</span>
+                        </div>
+                    </div>
+                    <p class="wifi-password-label">Contraseña:</p>
+                    <div class="wifi-value-container">
+                        <p class="wifi-value" id="wifi-password-2">cabanas2024</p>
+                        <button class="copy-btn" onclick="copyToClipboard('wifi-password-2', this)" aria-label="Copiar contraseña">
+                            <i data-lucide="copy" class="icon-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <p class="wifi-note">Toca <i data-lucide="copy" class="icon-inline-note"></i> para copiar</p>
+            </div>
+            <div class="card card-important">
+                <h2>Contacto Recepción</h2>
+                <a href="tel:+543544000000" class="phone-link" aria-label="Llamar a recepción">
+                    <i data-lucide="phone" class="icon-inline"></i> Llamar ahora
+                </a>
+                <a href="https://wa.me/543544000000" target="_blank" rel="noopener noreferrer" class="phone-link" aria-label="WhatsApp de recepción">
+                    <i data-lucide="message-circle" class="icon-inline"></i> WhatsApp
+                </a>
+            </div>
+            <div class="card">
+                <h2>Horarios</h2>
+                <p><strong>Check-in:</strong> 15:00 hs</p>
+                <p><strong>Check-out:</strong> 10:00 hs</p>
+            </div>
+            
+
+        </main>
+    </div>
+
+    <div id="emergencias" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver al inicio">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Emergencias</h1>
+        </header>
+        <main>
+            <div class="card card-emergency">
+                <h2>🚑 Ambulancia</h2>
+                <p>Servicio de emergencias médicas</p>
+                <a href="tel:107" class="phone-link phone-link-emergency" aria-label="Llamar a ambulancia">
+                    <i data-lucide="phone" class="icon-inline"></i> Llamar al 107
+                </a>
+            </div>
+            <div class="card card-emergency">
+                <h2>🚒 Bomberos</h2>
+                <p>Emergencias de incendio y rescate</p>
+                <a href="tel:100" class="phone-link phone-link-emergency" aria-label="Llamar a bomberos">
+                    <i data-lucide="phone" class="icon-inline"></i> Llamar al 100
+                </a>
+            </div>
+            <div class="card card-emergency">
+                <h2>👮 Policía</h2>
+                <p>Emergencias de seguridad</p>
+                <a href="tel:101" class="phone-link phone-link-emergency" aria-label="Llamar a policía">
+                    <i data-lucide="phone" class="icon-inline"></i> Llamar al 101
+                </a>
+            </div>
+            <div class="card">
+                <h2>🏥 Hospital más cercano</h2>
+                <p>Hospital Regional Nono</p>
+                <p>A 10 minutos en auto</p>
+                <a href="tel:+543544000000" class="phone-link" aria-label="Llamar al hospital">
+                    <i data-lucide="phone" class="icon-inline"></i> Llamar
+                </a>
+                <a href="https://maps.google.com/?q=Hospital+Regional+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver hospital en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                </a>
+            </div>
+            <div class="card">
+                <h2>💊 Farmacia de Guardia</h2>
+                <p>Farmacia Central - Servicio 24hs</p>
+                <a href="tel:+543544000000" class="phone-link" aria-label="Llamar a farmacia">
+                    <i data-lucide="phone" class="icon-inline"></i> Llamar
+                </a>
+                <a href="https://maps.google.com/?q=Farmacia+Central+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver farmacia en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <div id="comer" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver al inicio">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Dónde comer</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Restaurante El Mirador</h2>
+                <p>A 5 minutos caminando. Cocina tradicional con platos locales.</p>
+                <a href="https://maps.google.com/?q=Restaurante+El+Mirador" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Restaurante El Mirador en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                </a>
+            </div>
+            <div class="card">
+                <h2>Café del Lago</h2>
+                <p>Desayunos y meriendas. Vista al lago. Abierto de 8am a 6pm.</p>
+                <a href="https://maps.google.com/?q=Café+del+Lago" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Café del Lago en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                </a>
+            </div>
+            <div class="card">
+                <h2>Parrilla Don José</h2>
+                <p>Carnes a la parrilla. Ideal para cenas. Reservas recomendadas.</p>
+                <a href="https://maps.google.com/?q=Parrilla+Don+José" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Parrilla Don José en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <div id="hacer" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver al inicio">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Qué hacer cerca</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Sendero del Bosque</h2>
+                <p>Caminata fácil de 1 hora. Ideal para toda la familia.</p>
+                <a href="https://maps.google.com/?q=Sendero+del+Bosque" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Sendero del Bosque en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Lago Azul</h2>
+                <p>Paseos en bote y pesca. Alquiler de kayaks disponible.</p>
+                <a href="https://maps.google.com/?q=Lago+Azul" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Lago Azul en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                </a>
+            </div>
+            <div class="card">
+                <h2>Mirador Panorámico</h2>
+                <p>Vista espectacular. 15 minutos en auto. Mejor al atardecer.</p>
+                <a href="https://maps.google.com/?q=Mirador+Panorámico" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Mirador Panorámico en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <div id="servicios" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver al inicio">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Servicios útiles</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Supermercado La Esquina</h2>
+                <p>Abierto de 8am a 10pm. Productos frescos y básicos.</p>
+                <a href="https://maps.google.com/?q=Supermercado+La+Esquina" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Supermercado La Esquina en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                </a>
+            </div>
+            <div class="card">
+                <h2>Farmacia Central</h2>
+                <p>Servicio 24 horas. Medicamentos y primeros auxilios.</p>
+                <a href="https://maps.google.com/?q=Farmacia+Central" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Farmacia Central en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                </a>
+            </div>
+            <div class="card">
+                <h2>Estación de Servicio YPF</h2>
+                <p>Combustible y minimarket. Abierto 24 horas.</p>
+                <a href="https://maps.google.com/?q=YPF+Estación+de+Servicio" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Estación de Servicio YPF en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <div id="moverse" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver al inicio">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Cómo moverse</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Transporte público</h2>
+                <p>Autobús cada hora desde la entrada principal. Tarifa: $500.</p>
+                <a href="https://maps.google.com/?q=Parada+de+autobús" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver parada de autobús en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver parada
+                </a>
+            </div>
+            <div class="card">
+                <h2>Taxi / Remis</h2>
+                <p>Servicio disponible 24/7. Llamar con anticipación.</p>
+                <a href="tel:+5491112345678" class="phone-link" aria-label="Llamar a taxi">
+                    <i data-lucide="phone" class="icon-inline"></i> Llamar ahora
+                </a>
+            </div>
+            <div class="card">
+                <h2>Alquiler de bicicletas</h2>
+                <p>En la recepción del complejo. $1000 por día.</p>
+                <a href="https://maps.google.com/?q=Posada+de+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Posada de Nono en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
