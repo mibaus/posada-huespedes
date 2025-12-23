@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const screens = document.querySelectorAll('.screen');
     const actionBtns = document.querySelectorAll('.action-btn');
     const backBtns = document.querySelectorAll('.back-btn');
+    const floatingBackBtn = document.querySelector('.floating-back-btn');
     let navigationHistory = ['home'];
 
     actionBtns.forEach(btn => {
@@ -17,20 +18,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     backBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            if (navigationHistory.length > 0) {
-                const previousScreen = navigationHistory.pop();
-                showScreen(previousScreen);
-            } else {
-                showScreen('home');
-            }
+            goBack();
         });
     });
+
+    // Manejar botón flotante
+    if (floatingBackBtn) {
+        floatingBackBtn.addEventListener('click', function() {
+            goBack();
+        });
+    }
+
+    function goBack() {
+        if (navigationHistory.length > 0) {
+            const previousScreen = navigationHistory.pop();
+            showScreen(previousScreen);
+        } else {
+            showScreen('home');
+        }
+    }
 
     function showScreen(id) {
         screens.forEach(screen => {
             screen.classList.remove('active');
         });
         document.getElementById(id).classList.add('active');
+        
+        // Mostrar/ocultar botón flotante según la pantalla
+        if (floatingBackBtn) {
+            if (id === 'home') {
+                floatingBackBtn.style.display = 'none';
+            } else {
+                floatingBackBtn.style.display = 'flex';
+            }
+        }
     }
 });
 

@@ -428,7 +428,7 @@ main {
     transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Botón volver */
+/* Botón volver en header */
 .back-btn {
     position: absolute;
     left: 15px;
@@ -463,6 +463,57 @@ main {
     border-color: rgba(190, 169, 142, 0.45);
     box-shadow: 0 2px 6px rgba(44, 24, 16, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.75);
     transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Botón flotante para volver */
+.floating-back-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(190, 169, 142, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 0 2px 8px rgba(44, 24, 16, 0.08), 0 1px 3px rgba(44, 24, 16, 0.04);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    opacity: 0.85;
+}
+
+.floating-back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 24, 16, 0.12), 0 2px 4px rgba(44, 24, 16, 0.06);
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+    border-color: rgba(190, 169, 142, 0.3);
+}
+
+.floating-back-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(44, 24, 16, 0.08);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.floating-back-btn .icon-back {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+    color: #2C1810;
+    opacity: 0.7;
+}
+
+#home .floating-back-btn {
+    display: none;
 }
 
 /* Accesibilidad */
