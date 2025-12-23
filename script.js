@@ -1,20 +1,28 @@
-// Simple navigation script
+// Simple navigation script with history
 
 document.addEventListener('DOMContentLoaded', function() {
     const screens = document.querySelectorAll('.screen');
     const actionBtns = document.querySelectorAll('.action-btn');
     const backBtns = document.querySelectorAll('.back-btn');
+    let navigationHistory = ['home'];
 
     actionBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             const target = this.getAttribute('data-target');
+            const currentScreen = document.querySelector('.screen.active').id;
+            navigationHistory.push(currentScreen);
             showScreen(target);
         });
     });
 
     backBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            showScreen('home');
+            if (navigationHistory.length > 0) {
+                const previousScreen = navigationHistory.pop();
+                showScreen(previousScreen);
+            } else {
+                showScreen('home');
+            }
         });
     });
 

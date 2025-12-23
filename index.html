@@ -18,7 +18,7 @@
     <link rel="dns-prefetch" href="https://maps.google.com">
     
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
     <div id="home" class="screen active">
@@ -52,18 +52,6 @@
                     <i data-lucide="shopping-bag" class="icon"></i>
                 </span>
             </button>
-            <button class="action-btn" data-target="moverse" aria-label="Cómo moverse">
-                <span class="btn-content">
-                    <span class="btn-text">Cómo moverse</span>
-                    <i data-lucide="map-pin" class="icon"></i>
-                </span>
-            </button>
-            <button class="action-btn action-btn-emergency" data-target="emergencias" aria-label="Números de emergencia">
-                <span class="btn-content">
-                    <span class="btn-text">Emergencias</span>
-                    <i data-lucide="siren" class="icon"></i>
-                </span>
-            </button>
         </main>
     </div>
 
@@ -85,20 +73,20 @@
                     <div class="wifi-networks">
                         <div class="wifi-network-item">
                             <i data-lucide="wifi" class="wifi-icon"></i>
-                            <span class="network-name">Posada_Nono_Principal</span>
+                            <span class="network-name">Posada de Nono</span>
                         </div>
                         <div class="wifi-network-item">
                             <i data-lucide="wifi" class="wifi-icon"></i>
-                            <span class="network-name">Posada_Nono_Salon</span>
+                            <span class="network-name">Posada de Nono 1</span>
                         </div>
                         <div class="wifi-network-item">
                             <i data-lucide="wifi" class="wifi-icon"></i>
-                            <span class="network-name">Posada_Nono_Piscina</span>
+                            <span class="network-name">Posada de Nono 3</span>
                         </div>
                     </div>
                     <p class="wifi-password-label">Contraseña:</p>
                     <div class="wifi-value-container">
-                        <p class="wifi-value" id="wifi-password-1">nono2024wifi</p>
+                        <p class="wifi-value" id="wifi-password-1">abc1234posada</p>
                         <button class="copy-btn" onclick="copyToClipboard('wifi-password-1', this)" aria-label="Copiar contraseña">
                             <i data-lucide="copy" class="icon-copy"></i>
                         </button>
@@ -111,35 +99,63 @@
                     <div class="wifi-networks">
                         <div class="wifi-network-item">
                             <i data-lucide="wifi" class="wifi-icon"></i>
-                            <span class="network-name">Posada_Nono_Cabañas</span>
+                            <span class="network-name">Posada de Nono 2</span>
                         </div>
                     </div>
                     <p class="wifi-password-label">Contraseña:</p>
                     <div class="wifi-value-container">
-                        <p class="wifi-value" id="wifi-password-2">cabanas2024</p>
+                        <p class="wifi-value" id="wifi-password-2">posada2023</p>
                         <button class="copy-btn" onclick="copyToClipboard('wifi-password-2', this)" aria-label="Copiar contraseña">
                             <i data-lucide="copy" class="icon-copy"></i>
                         </button>
                     </div>
                 </div>
 
+                <!-- Grupo 3: Redes principales -->
+                <div class="wifi-group">
+                    <p class="wifi-group-title">Redes:</p>
+                    <div class="wifi-networks">
+                        <div class="wifi-network-item">
+                            <i data-lucide="wifi" class="wifi-icon"></i>
+                            <span class="network-name">Posada de Nono ✨</span>
+                        </div>
+                        <div class="wifi-network-item">
+                            <i data-lucide="wifi" class="wifi-icon"></i>
+                            <span class="network-name">Posada de Nono ✨✨</span>
+                        </div>
+                    </div>
+                    <p class="wifi-password-label">Contraseña:</p>
+                    <div class="wifi-value-container">
+                        <p class="wifi-value" id="wifi-password-1">posadadenono</p>
+                        <button class="copy-btn" onclick="copyToClipboard('wifi-password-1', this)" aria-label="Copiar contraseña">
+                            <i data-lucide="copy" class="icon-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+               
+
                 <p class="wifi-note">Toca <i data-lucide="copy" class="icon-inline-note"></i> para copiar</p>
             </div>
             <div class="card card-important">
                 <h2>Contacto Recepción</h2>
-                <a href="tel:+543544000000" class="phone-link" aria-label="Llamar a recepción">
-                    <i data-lucide="phone" class="icon-inline"></i> Llamar ahora
-                </a>
-                <a href="https://wa.me/543544000000" target="_blank" rel="noopener noreferrer" class="phone-link" aria-label="WhatsApp de recepción">
-                    <i data-lucide="message-circle" class="icon-inline"></i> WhatsApp
-                </a>
+                <div class="contact-buttons">
+                    <a href="tel:+543516178200" class="phone-link phone-link-full" aria-label="Llamar a recepción">
+                        <i data-lucide="phone" class="icon-contact"></i>
+                        <span>Llamar</span>
+                    </a>
+                    <a href="https://wa.me/543516178200" target="_blank" rel="noopener noreferrer" class="phone-link phone-link-full" aria-label="WhatsApp de recepción">
+                        <i data-lucide="message-circle" class="icon-contact"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
             </div>
             <div class="card">
                 <h2>Horarios</h2>
                 <p><strong>Check-in:</strong> 15:00 hs</p>
                 <p><strong>Check-out:</strong> 10:00 hs</p>
+                <p><strong>Servicio de limpieza diario:</strong> [Horario]</p>
             </div>
-            
 
         </main>
     </div>
@@ -206,25 +222,76 @@
         </header>
         <main>
             <div class="card">
-                <h2>Restaurante El Mirador</h2>
-                <p>A 5 minutos caminando. Cocina tradicional con platos locales.</p>
-                <a href="https://maps.google.com/?q=Restaurante+El+Mirador" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Restaurante El Mirador en mapa">
-                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
-                </a>
+                <h2>Rumy Huasi</h2>
+                <p>Ambiente familiar. Comidas caseras, pastas caseras, carnes, parrilla, pizzas y pescados.</p>
+                <div class="action-links">
+                    <a href="https://wa.me/5493544XXXXXX" target="_blank" rel="noopener noreferrer" class="phone-link" aria-label="WhatsApp Rumy Huasi">
+                        <i data-lucide="message-circle" class="icon-inline"></i> WhatsApp
+                    </a>
+                    <a href="https://maps.google.com/?q=Rumy+Huasi+Nono+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Rumy Huasi en mapa">
+                        <i data-lucide="map-pin" class="icon-inline"></i> Ubicación
+                    </a>
+                </div>
             </div>
             <div class="card">
-                <h2>Café del Lago</h2>
-                <p>Desayunos y meriendas. Vista al lago. Abierto de 8am a 6pm.</p>
-                <a href="https://maps.google.com/?q=Café+del+Lago" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Café del Lago en mapa">
-                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
-                </a>
+                <h2>Mona Lisa</h2>
+                <p>Resto bar sobre Ruta 14 y Vicente Castro. Variedad de platos.</p>
+                <div class="action-links">
+                    <a href="https://wa.me/5493544498046" target="_blank" rel="noopener noreferrer" class="phone-link" aria-label="WhatsApp Mona Lisa">
+                        <i data-lucide="message-circle" class="icon-inline"></i> WhatsApp
+                    </a>
+                    <a href="https://maps.google.com/?q=Mona+Lisa+Resto+Bar+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Mona Lisa en mapa">
+                        <i data-lucide="map-pin" class="icon-inline"></i> Ubicación
+                    </a>
+                </div>
             </div>
             <div class="card">
-                <h2>Parrilla Don José</h2>
-                <p>Carnes a la parrilla. Ideal para cenas. Reservas recomendadas.</p>
-                <a href="https://maps.google.com/?q=Parrilla+Don+José" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Parrilla Don José en mapa">
-                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
-                </a>
+                <h2>Café Barranco</h2>
+                <p>Café y resto bar. Ideal para desayunos y meriendas.</p>
+                <div class="action-links">
+                    <a href="https://wa.me/5493544XXXXXX" target="_blank" rel="noopener noreferrer" class="phone-link" aria-label="WhatsApp Café Barranco">
+                        <i data-lucide="message-circle" class="icon-inline"></i> WhatsApp
+                    </a>
+                    <a href="https://maps.google.com/?q=Café+Barranco+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Café Barranco en mapa">
+                        <i data-lucide="map-pin" class="icon-inline"></i> Ubicación
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h2>La Vieja Esquina</h2>
+                <p>Casona histórica en Sarmiento y Mitre. Especialidad en pizzas y empanadas.</p>
+                <div class="action-links">
+                    <a href="https://wa.me/5493544444825" target="_blank" rel="noopener noreferrer" class="phone-link" aria-label="WhatsApp La Vieja Esquina">
+                        <i data-lucide="message-circle" class="icon-inline"></i> WhatsApp
+                    </a>
+                    <a href="https://maps.google.com/?q=La+Vieja+Esquina+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver La Vieja Esquina en mapa">
+                        <i data-lucide="map-pin" class="icon-inline"></i> Ubicación
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h2>La Bonita</h2>
+                <p>Servicio de delivery disponible. Consultar menú y horarios.</p>
+                <div class="action-links">
+                    <a href="https://wa.me/5493544XXXXXX" target="_blank" rel="noopener noreferrer" class="phone-link" aria-label="WhatsApp La Bonita">
+                        <i data-lucide="message-circle" class="icon-inline"></i> WhatsApp
+                    </a>
+                    <a href="https://maps.google.com/?q=La+Bonita+Nono+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver La Bonita en mapa">
+                        <i data-lucide="map-pin" class="icon-inline"></i> Ubicación
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h2>La Juntura</h2>
+                <p>Resto bar frente a la plaza. Pizzas, lomitos, pastas, pejerrey y cerveza artesanal. Zona de juegos para niños.</p>
+                <div class="action-links">
+                    <a href="https://wa.me/5493544XXXXXX" target="_blank" rel="noopener noreferrer" class="phone-link" aria-label="WhatsApp La Juntura">
+                        <i data-lucide="message-circle" class="icon-inline"></i> WhatsApp
+                    </a>
+                    <a href="https://maps.google.com/?q=La+Juntura+Restobar+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver La Juntura en mapa">
+                        <i data-lucide="map-pin" class="icon-inline"></i> Ubicación
+                    </a>
+                </div>
             </div>
         </main>
     </div>
@@ -237,25 +304,357 @@
             <h1>Qué hacer cerca</h1>
         </header>
         <main>
+            <button class="action-btn" data-target="balnearios" aria-label="Balnearios y Ríos">
+                <span class="btn-content">
+                    <span class="btn-text">Balnearios y Ríos</span>
+                    <i data-lucide="waves" class="icon"></i>
+                </span>
+            </button>
+            <button class="action-btn" data-target="cultura" aria-label="Cultura y Museos">
+                <span class="btn-content">
+                    <span class="btn-text">Cultura y Museos</span>
+                    <i data-lucide="landmark" class="icon"></i>
+                </span>
+            </button>
+            <button class="action-btn" data-target="aventura" aria-label="Aventura y Naturaleza">
+                <span class="btn-content">
+                    <span class="btn-text">Aventura y Naturaleza</span>
+                    <i data-lucide="mountain" class="icon"></i>
+                </span>
+            </button>
+            <button class="action-btn" data-target="gastronomia" aria-label="Gastronomía y Bodegas">
+                <span class="btn-content">
+                    <span class="btn-text">Gastronomía y Bodegas</span>
+                    <i data-lucide="wine" class="icon"></i>
+                </span>
+            </button>
+            <button class="action-btn" data-target="entretenimiento" aria-label="Entretenimiento">
+                <span class="btn-content">
+                    <span class="btn-text">Entretenimiento</span>
+                    <i data-lucide="ticket" class="icon"></i>
+                </span>
+            </button>
+        </main>
+    </div>
+
+    <div id="balnearios" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Balnearios y Ríos</h1>
+        </header>
+        <main>
             <div class="card">
-                <h2>Sendero del Bosque</h2>
-                <p>Caminata fácil de 1 hora. Ideal para toda la familia.</p>
-                <a href="https://maps.google.com/?q=Sendero+del+Bosque" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Sendero del Bosque en mapa">
+                <h2>La Kiva</h2>
+                <p><span class="badge">📍 Nono</span> <span class="badge-hot">🔥 Temporada Alta</span></p>
+                <p>Parador junto al río. Ideal para disfrutar en verano.</p>
+                <a href="https://maps.google.com/?q=La+Kiva+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver La Kiva en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
             <div class="card">
-                <h2>Lago Azul</h2>
-                <p>Paseos en bote y pesca. Alquiler de kayaks disponible.</p>
-                <a href="https://maps.google.com/?q=Lago+Azul" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Lago Azul en mapa">
-                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                <h2>Librae</h2>
+                <p><span class="badge">📍 Nono</span></p>
+                <p>Río + Restaurante. Entorno natural con gastronomía.</p>
+                <a href="https://maps.google.com/?q=Librae+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Librae en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
             <div class="card">
-                <h2>Mirador Panorámico</h2>
-                <p>Vista espectacular. 15 minutos en auto. Mejor al atardecer.</p>
-                <a href="https://maps.google.com/?q=Mirador+Panorámico" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Mirador Panorámico en mapa">
-                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                <h2>Paso de Las Tropas</h2>
+                <p><span class="badge">📍 Nono</span></p>
+                <p>Balneario natural rodeado de vegetación.</p>
+                <a href="https://maps.google.com/?q=Paso+de+Las+Tropas+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Paso de Las Tropas en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Los Remansos</h2>
+                <p><span class="badge">📍 Nono</span></p>
+                <p>Zona de río tranquila, perfecta para familias.</p>
+                <a href="https://maps.google.com/?q=Los+Remansos+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Los Remansos en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Río Los Sauces y La Juntura</h2>
+                <p><span class="badge">📍 Nono</span></p>
+                <p>Punto de encuentro de ríos, paisaje único.</p>
+                <a href="https://maps.google.com/?q=Río+Los+Sauces+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Río Los Sauces en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>La Toma</h2>
+                <p><span class="badge">🗺️ Mina Clavero</span></p>
+                <p>Tobogán natural de piedra. Muy popular en verano.</p>
+                <a href="https://maps.google.com/?q=La+Toma+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver La Toma en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Nido del Águila</h2>
+                <p><span class="badge">🗺️ Mina Clavero</span></p>
+                <p>Balneario con vistas panorámicas del valle.</p>
+                <a href="https://maps.google.com/?q=Nido+del+Águila+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Nido del Águila en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Los Elefantes</h2>
+                <p><span class="badge">🗺️ Mina Clavero</span></p>
+                <p>Balneario familiar con formaciones rocosas.</p>
+                <a href="https://maps.google.com/?q=Los+Elefantes+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Los Elefantes en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Valle Encantado</h2>
+                <p><span class="badge">🗺️ Las Rabonas</span></p>
+                <p>Parque acuático con toboganes y piletas.</p>
+                <a href="https://maps.google.com/?q=Valle+Encantado+Las+Rabonas" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Valle Encantado en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Club de Pescadores APA I y II</h2>
+                <p><span class="badge">🗺️ Las Rabonas</span></p>
+                <p>Alquiler de botes para pesca y paseos.</p>
+                <div class="action-links">
+                    <a href="https://maps.google.com/?q=Club+Pescadores+APA+Las+Rabonas" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Club de Pescadores en mapa">
+                        <i data-lucide="map-pin" class="icon-inline"></i> Ubicación
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Dique La Viña</h2>
+                <p><span class="badge">🗺️ Las Rosas</span></p>
+                <p>Paseo panorámico con vistas al embalse.</p>
+                <a href="https://maps.google.com/?q=Dique+La+Viña+Las+Rosas" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Dique La Viña en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <div id="cultura" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Cultura y Museos</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Museo ROCSEN</h2>
+                <p><span class="badge">📍 Nono</span> <span class="badge-hot">🤯 Imperdible</span></p>
+                <p>Museo antropológico con más de 20.000 objetos de todo el mundo.</p>
+                <a href="https://maps.google.com/?q=Museo+ROCSEN+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Museo ROCSEN en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Laberinto de Nono</h2>
+                <p><span class="badge">📍 Nono</span></p>
+                <p>Laberinto de ligustrina con juegos y desafíos.</p>
+                <a href="https://maps.google.com/?q=Laberinto+de+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Laberinto de Nono en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Plaza Principal</h2>
+                <p><span class="badge">📍 Nono</span></p>
+                <p>Artesanías y shows en vivo. Temporada alta y fines de semana.</p>
+                <a href="https://maps.google.com/?q=Plaza+Principal+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Plaza Principal en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Museo Cura Brochero</h2>
+                <p><span class="badge">🗺️ Valle de Traslasierra</span></p>
+                <p>Museo dedicado al santo cordobés. Historia y patrimonio.</p>
+                <a href="https://maps.google.com/?q=Museo+Cura+Brochero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Museo Cura Brochero en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Los Túneles de Taninga</h2>
+                <p><span class="badge">🗺️ Valle de Traslasierra</span></p>
+                <p>Túneles históricos excavados en la montaña. Recorrido guiado.</p>
+                <a href="https://maps.google.com/?q=Túneles+de+Taninga" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Túneles de Taninga en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <div id="aventura" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Aventura y Naturaleza</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Cabalgatas</h2>
+                <p><span class="badge">📍 Nono</span></p>
+                <p>Paseos a caballo por las sierras. Guías experimentados.</p>
+                <div class="action-links">
+                    <a href="tel:+5493544562276" class="phone-link" aria-label="Llamar para cabalgatas">
+                        <i data-lucide="phone" class="icon-inline"></i> 3544 562276
+                    </a>
+                    <a href="https://maps.google.com/?q=Cabalgatas+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver ubicación">
+                        <i data-lucide="map-pin" class="icon-inline"></i> Ubicación
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Trekking Casita de Cristal</h2>
+                <p><span class="badge">📍 Nono</span></p>
+                <p>Trekking guiado a la icónica Casita de Cristal.</p>
+                <div class="action-links">
+                    <a href="tel:+5493544687142" class="phone-link" aria-label="Llamar para trekking">
+                        <i data-lucide="phone" class="icon-inline"></i> 3544 687142
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h2>La Huella Turismo Aventura</h2>
+                <p><span class="badge">📍 Nono</span></p>
+                <p>Kayak, trekking y escalada. Equipamiento profesional.</p>
+                <div class="action-links">
+                    <a href="tel:+5493544405328" class="phone-link" aria-label="Llamar a La Huella">
+                        <i data-lucide="phone" class="icon-inline"></i> 3544 405328
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Parapente - Vuelos Bautismo</h2>
+                <p><span class="badge">📍 Nono</span></p>
+                <p>Vuelos en parapente con instructores certificados.</p>
+                <div class="action-links">
+                    <a href="tel:+541137979573" class="phone-link" aria-label="Llamar para parapente">
+                        <i data-lucide="phone" class="icon-inline"></i> 11 3797 9573
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Reserva Biodiversidad Nativa</h2>
+                <p><span class="badge">🗺️ Los Hornillos</span></p>
+                <p>Reserva natural con paseos y senderismo. Flora y fauna nativa.</p>
+                <a href="https://maps.google.com/?q=Reserva+Biodiversidad+Nativa+Los+Hornillos" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver reserva">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Cascada del Toro Muerto</h2>
+                <p><span class="badge">🗺️ Valle de Traslasierra</span></p>
+                <p>Cascada natural. Trekking de dificultad media.</p>
+                <a href="https://maps.google.com/?q=Cascada+Toro+Muerto+Traslasierra" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver cascada">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>RAF Turismo</h2>
+                <p><span class="badge">🗺️ Mina Clavero</span></p>
+                <p>Paseos, traslados al aeropuerto y alquiler de bicicletas.</p>
+                <div class="action-links">
+                    <a href="tel:+5493544444290" class="phone-link" aria-label="Llamar a RAF Turismo">
+                        <i data-lucide="phone" class="icon-inline"></i> 3544 44-4290
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="gastronomia" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Gastronomía y Bodegas</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Fábrica OLIUM</h2>
+                <p><span class="badge">🗺️ Las Rosas</span></p>
+                <p>Recorrido por la fábrica y degustación de aceites de oliva premium.</p>
+                <a href="https://maps.google.com/?q=OLIUM+Las+Rosas+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver OLIUM">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Eben Ezer</h2>
+                <p><span class="badge">🗺️ Las Rabonas</span></p>
+                <p>Licorería artesanal antigua. Degustación de licores caseros.</p>
+                <a href="https://maps.google.com/?q=Eben+Ezer+Las+Rabonas" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Eben Ezer">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Ruta del Vino</h2>
+                <p><span class="badge">🗺️ Valle de Traslasierra</span></p>
+                <p>Recorrido por bodegas del valle. Catas y maridajes.</p>
+                <a href="https://maps.google.com/?q=Ruta+del+Vino+Traslasierra" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Ruta del Vino">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver bodegas
+                </a>
+            </div>
+            <div class="card">
+                <h2>Granja El Encanto</h2>
+                <p><span class="badge">🗺️ Valle de Traslasierra</span></p>
+                <p>Granja didáctica con animales. Ideal para familias.</p>
+                <div class="action-links">
+                    <a href="tel:+5493544628505" class="phone-link" aria-label="Llamar a Granja El Encanto">
+                        <i data-lucide="phone" class="icon-inline"></i> 3544 62-8505
+                    </a>
+                    <a href="https://maps.google.com/?q=Granja+El+Encanto+Traslasierra" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver ubicación">
+                        <i data-lucide="map-pin" class="icon-inline"></i> Ubicación
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="entretenimiento" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Entretenimiento</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Feria de Las Rosas</h2>
+                <p><span class="badge">🗺️ Las Rosas</span></p>
+                <p>Sábados de 11 a 17 hs. En julio y verano: jueves y sábados. Artesanías y productos regionales.</p>
+                <a href="https://maps.google.com/?q=Feria+Las+Rosas+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Feria Las Rosas">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Bowling</h2>
+                <p><span class="badge">🗺️ Mina Clavero</span></p>
+                <p>Bowling moderno para toda la familia.</p>
+                <a href="https://maps.google.com/?q=Bowling+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Bowling">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Cine y Teatro Milac Navira</h2>
+                <p><span class="badge">🗺️ Mina Clavero</span></p>
+                <p>Cine y teatro con cartelera actualizada.</p>
+                <a href="https://maps.google.com/?q=Cine+Teatro+Milac+Navira+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Cine Teatro">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
+                </a>
+            </div>
+            <div class="card">
+                <h2>Casino</h2>
+                <p><span class="badge">🗺️ Mina Clavero</span></p>
+                <p>Casino con juegos de azar y entretenimiento nocturno.</p>
+                <a href="https://maps.google.com/?q=Casino+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Casino">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
         </main>
@@ -270,23 +669,23 @@
         </header>
         <main>
             <div class="card">
-                <h2>Supermercado La Esquina</h2>
-                <p>Abierto de 8am a 10pm. Productos frescos y básicos.</p>
-                <a href="https://maps.google.com/?q=Supermercado+La+Esquina" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Supermercado La Esquina en mapa">
+                <h2>Supermercados</h2>
+                <p>Encuentra supermercados cercanos en Nono.</p>
+                <a href="https://maps.google.com/?q=supermercados+Nono+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver supermercados en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
                 </a>
             </div>
             <div class="card">
-                <h2>Farmacia Central</h2>
-                <p>Servicio 24 horas. Medicamentos y primeros auxilios.</p>
-                <a href="https://maps.google.com/?q=Farmacia+Central" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Farmacia Central en mapa">
+                <h2>Farmacias cercanas</h2>
+                <p>Encuentra farmacias en Nono.</p>
+                <a href="https://maps.google.com/?q=farmacias+Nono+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver farmacias en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
                 </a>
             </div>
             <div class="card">
                 <h2>Estación de Servicio YPF</h2>
-                <p>Combustible y minimarket. Abierto 24 horas.</p>
-                <a href="https://maps.google.com/?q=YPF+Estación+de+Servicio" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Estación de Servicio YPF en mapa">
+                <p>Combustible y minimarket en Nono.</p>
+                <a href="https://maps.google.com/?q=YPF+Nono+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver YPF Nono en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
                 </a>
             </div>

@@ -1,0 +1,11 @@
+{
+  "name": "posada-nono",
+  "version": "1.0.0",
+  "description": "Guía digital para huéspedes de Posada de Nono",
+  "scripts": {
+    "dev": "live-server --port=3000 --host=localhost --open=/ --watch=."
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
