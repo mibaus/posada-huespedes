@@ -7,6 +7,13 @@
     <meta name="description" content="Guía digital para huéspedes de Posada de Nono. Encuentra restaurantes, actividades, servicios y toda la información que necesitas durante tu estadía.">
     <meta name="theme-color" content="#BEA98E">
     
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Posada de Nono">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+    
     <!-- Open Graph / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Posada de Nono - Guía del Huésped">
@@ -732,6 +739,19 @@
     <script src="script.js"></script>
     <script>
         lucide.createIcons();
+        
+        // Registrar Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Error al registrar Service Worker:', error);
+                    });
+            });
+        }
     </script>
 </body>
 </html>

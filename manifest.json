@@ -1,0 +1,27 @@
+{
+  "name": "Posada de Nono - Guía del Huésped",
+  "short_name": "Posada Nono",
+  "description": "Guía digital para huéspedes de Posada de Nono en Traslasierra, Córdoba",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F1EB",
+  "theme_color": "#BEA98E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["travel", "lifestyle"],
+  "lang": "es-AR",
+  "dir": "ltr"
+}
