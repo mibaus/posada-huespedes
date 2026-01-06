@@ -63,12 +63,24 @@
                     <i data-lucide="mountain" class="icon"></i>
                 </span>
             </button>
+            <button class="action-btn" data-target="bienestar" aria-label="Bienestar y Spa">
+                <span class="btn-content">
+                    <span class="btn-text">Bienestar y Spa</span>
+                    <i data-lucide="sparkles" class="icon"></i>
+                </span>
+            </button>
             <button class="action-btn" data-target="servicios" aria-label="Servicios útiles">
                 <span class="btn-content">
                     <span class="btn-text">Servicios útiles</span>
                     <i data-lucide="shopping-bag" class="icon"></i>
                 </span>
             </button>
+            <!-- <button class="action-btn action-btn-emergency" data-target="emergencias" aria-label="Emergencias">
+                <span class="btn-content">
+                    <span class="btn-text">Emergencias</span>
+                    <i data-lucide="phone-call" class="icon"></i>
+                </span>
+            </button> -->
         </main>
     </div>
 
@@ -82,63 +94,13 @@
         <main>
             <div class="card card-important">
                 <h2>WiFi del Complejo</h2>
-                <p class="wifi-intro">Conectate según tu ubicación</p>
                 
-                <!-- Grupo 1: Redes principales -->
-                <div class="wifi-group">
-                    <p class="wifi-group-title">Redes:</p>
-                    <div class="wifi-networks">
-                        <div class="wifi-network-item">
-                            <i data-lucide="wifi" class="wifi-icon"></i>
-                            <span class="network-name">Posada de Nono</span>
-                        </div>
-                        <div class="wifi-network-item">
-                            <i data-lucide="wifi" class="wifi-icon"></i>
-                            <span class="network-name">Posada de Nono 1</span>
-                        </div>
-                        <div class="wifi-network-item">
-                            <i data-lucide="wifi" class="wifi-icon"></i>
-                            <span class="network-name">Posada de Nono 3</span>
-                        </div>
-                    </div>
-                    <p class="wifi-password-label">Contraseña:</p>
-                    <div class="wifi-value-container">
-                        <p class="wifi-value" id="wifi-password-1">abc1234posada</p>
-                        <button class="copy-btn" onclick="copyToClipboard('wifi-password-1', this)" aria-label="Copiar contraseña">
-                            <i data-lucide="copy" class="icon-copy"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Grupo 2: Red de cabañas -->
                 <div class="wifi-group">
                     <p class="wifi-group-title">Red:</p>
                     <div class="wifi-networks">
                         <div class="wifi-network-item">
                             <i data-lucide="wifi" class="wifi-icon"></i>
-                            <span class="network-name">Posada de Nono 2</span>
-                        </div>
-                    </div>
-                    <p class="wifi-password-label">Contraseña:</p>
-                    <div class="wifi-value-container">
-                        <p class="wifi-value" id="wifi-password-2">posada2023</p>
-                        <button class="copy-btn" onclick="copyToClipboard('wifi-password-2', this)" aria-label="Copiar contraseña">
-                            <i data-lucide="copy" class="icon-copy"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Grupo 3: Redes principales -->
-                <div class="wifi-group">
-                    <p class="wifi-group-title">Redes:</p>
-                    <div class="wifi-networks">
-                        <div class="wifi-network-item">
-                            <i data-lucide="wifi" class="wifi-icon"></i>
                             <span class="network-name">Posada de Nono ✨</span>
-                        </div>
-                        <div class="wifi-network-item">
-                            <i data-lucide="wifi" class="wifi-icon"></i>
-                            <span class="network-name">Posada de Nono ✨✨</span>
                         </div>
                     </div>
                     <p class="wifi-password-label">Contraseña:</p>
@@ -149,8 +111,6 @@
                         </button>
                     </div>
                 </div>
-
-               
 
                 <p class="wifi-note">Toca <i data-lucide="copy" class="icon-inline-note"></i> para copiar</p>
             </div>
@@ -177,7 +137,7 @@
         </main>
     </div>
 
-    <div id="emergencias" class="screen">
+    <!-- <div id="emergencias" class="screen">
         <header>
             <button class="back-btn" aria-label="Volver al inicio">
                 <i data-lucide="arrow-left" class="icon-back"></i>
@@ -186,49 +146,108 @@
         </header>
         <main>
             <div class="card card-emergency">
-                <h2>🚑 Ambulancia</h2>
-                <p>Servicio de emergencias médicas</p>
+                <h2>🚑 Ambulancia - SAME</h2>
+                <p>Emergencias médicas - Servicio de Atención Médica de Emergencias</p>
                 <a href="tel:107" class="phone-link phone-link-emergency" aria-label="Llamar a ambulancia">
                     <i data-lucide="phone" class="icon-inline"></i> Llamar al 107
                 </a>
             </div>
+            
             <div class="card card-emergency">
                 <h2>🚒 Bomberos</h2>
-                <p>Emergencias de incendio y rescate</p>
-                <a href="tel:100" class="phone-link phone-link-emergency" aria-label="Llamar a bomberos">
-                    <i data-lucide="phone" class="icon-inline"></i> Llamar al 100
-                </a>
+                <p>Emergencias de incendio, rescate y accidentes</p>
+                <p><strong>Bomberos Voluntarios Nono:</strong> Disponibles 24hs</p>
+                <div class="contact-buttons">
+                    <a href="tel:100" class="phone-link phone-link-emergency" aria-label="Llamar a bomberos nacional">
+                        <i data-lucide="phone" class="icon-inline"></i> 100 (Nacional)
+                    </a>
+                    <a href="tel:03544498100" class="phone-link phone-link-emergency" aria-label="Llamar a bomberos Nono">
+                        <i data-lucide="phone" class="icon-inline"></i> 03544 498100
+                    </a>
+                </div>
             </div>
+            
             <div class="card card-emergency">
                 <h2>👮 Policía</h2>
-                <p>Emergencias de seguridad</p>
-                <a href="tel:101" class="phone-link phone-link-emergency" aria-label="Llamar a policía">
-                    <i data-lucide="phone" class="icon-inline"></i> Llamar al 101
+                <p>Emergencias de seguridad y delitos</p>
+                <p><strong>Comisaría Nono:</strong> Ubicada en el centro del pueblo</p>
+                <div class="contact-buttons">
+                    <a href="tel:101" class="phone-link phone-link-emergency" aria-label="Llamar a policía nacional">
+                        <i data-lucide="phone" class="icon-inline"></i> 101 (Nacional)
+                    </a>
+                    <a href="tel:03544498027" class="phone-link phone-link-emergency" aria-label="Llamar a comisaría Nono">
+                        <i data-lucide="phone" class="icon-inline"></i> 03544 498027
+                    </a>
+                </div>
+            </div>
+
+            <div class="card card-emergency">
+                <h2>🆘 Defensa Civil</h2>
+                <p>Emergencias climáticas, inundaciones, accidentes graves</p>
+                <a href="tel:103" class="phone-link phone-link-emergency" aria-label="Llamar a defensa civil">
+                    <i data-lucide="phone" class="icon-inline"></i> Llamar al 103
                 </a>
             </div>
+            
             <div class="card">
-                <h2>🏥 Hospital más cercano</h2>
-                <p>Hospital Regional Nono</p>
-                <p>A 10 minutos en auto</p>
-                <a href="tel:+543544000000" class="phone-link" aria-label="Llamar al hospital">
-                    <i data-lucide="phone" class="icon-inline"></i> Llamar
-                </a>
-                <a href="https://maps.google.com/?q=Hospital+Regional+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver hospital en mapa">
-                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                <h2>🏥 Centro de Salud Nono</h2>
+                <p>Atención primaria y urgencias menores</p>
+                <p><strong>Ubicación:</strong> Av. San Martín, centro de Nono (10 min de la posada)</p>
+                <p><strong>Horario:</strong> Lunes a viernes 8-20hs, Sábados 9-13hs</p>
+                <p><strong>Guardia médica:</strong> Consultar disponibilidad</p>
+                <div class="contact-buttons">
+                    <a href="tel:03544498013" class="phone-link" aria-label="Llamar al centro de salud">
+                        <i data-lucide="phone" class="icon-inline"></i> 03544 498013
+                    </a>
+                    <a href="https://maps.google.com/?q=Centro+de+Salud+Nono+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver centro de salud en mapa">
+                        <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🏥 Hospital Mina Clavero</h2>
+                <p>Hospital completo con guardia 24hs y especialidades</p>
+                <p><strong>Distancia:</strong> 30 km (30 minutos en auto)</p>
+                <p><strong>Servicios:</strong> Emergencias, internación, cirugía, diagnóstico por imágenes</p>
+                <div class="contact-buttons">
+                    <a href="tel:03544470207" class="phone-link" aria-label="Llamar al hospital">
+                        <i data-lucide="phone" class="icon-inline"></i> 03544 470207
+                    </a>
+                    <a href="https://maps.google.com/?q=Hospital+Mina+Clavero+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver hospital en mapa">
+                        <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>💊 Farmacias en Nono</h2>
+                <p>Farmacias locales con medicamentos básicos y de venta libre</p>
+                <p><strong>Horario:</strong> Generalmente de 9 a 13hs y 17 a 21hs</p>
+                <p><strong>Farmacia de turno 24hs:</strong> Mina Clavero (30 min en auto)</p>
+                <a href="https://maps.google.com/?q=Farmacias+Nono+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver farmacias en mapa">
+                    <i data-lucide="map-pin" class="icon-inline"></i> Ver farmacias en Nono
                 </a>
             </div>
+
             <div class="card">
-                <h2>💊 Farmacia de Guardia</h2>
-                <p>Farmacia Central - Servicio 24hs</p>
-                <a href="tel:+543544000000" class="phone-link" aria-label="Llamar a farmacia">
-                    <i data-lucide="phone" class="icon-inline"></i> Llamar
+                <h2>🚗 Auxilio Mecánico</h2>
+                <p>Grúas y asistencia mecánica en ruta</p>
+                <p><strong>ACA (Automóvil Club Argentino):</strong> Socios</p>
+                <a href="tel:0800-777-2894" class="phone-link" aria-label="Llamar a ACA">
+                    <i data-lucide="phone" class="icon-inline"></i> 0800-777-2894
                 </a>
-                <a href="https://maps.google.com/?q=Farmacia+Central+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver farmacia en mapa">
-                    <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
-                </a>
+            </div>
+
+            <div class="card">
+                <h2>⚠️ Información Importante</h2>
+                <p><strong>Cobertura móvil:</strong> En Nono hay cobertura de las principales operadoras, pero puede ser limitada en zonas alejadas del centro.</p>
+                <p><strong>Ubicación exacta:</strong> Posada de Nono, Nono, Valle de Traslasierra, Córdoba</p>
+                <p><strong>Ruta de acceso:</strong> Ruta Provincial 14</p>
+                <p><strong>Hospital más cercano:</strong> Mina Clavero (30 km)</p>
             </div>
         </main>
-    </div>
+    </div> -->
 
     <div id="comer" class="screen">
         <header>
@@ -716,6 +735,40 @@
                 <p>Frente a la plaza principal, al lado del minimarket</p>
                 <a href="https://maps.google.com/?q=Punto+Digital+Nono+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Cajero Automático en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver en mapa
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <div id="bienestar" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Bienestar y Spa</h1>
+        </header>
+        <main>
+            <div class="card card-important">
+                <h2>Masajes Terapéuticos</h2>
+                <p><span class="badge">✨ En el complejo</span> <span class="badge-hot">💆 Profesional</span></p>
+                
+                <div class="massage-info">
+                    <h3>Servicios disponibles:</h3>
+                    <ul class="service-list">
+                        <li>Relajante</li>
+                        <li>Descontracturante</li>
+                        <li>Sueco</li>
+                        <li>Facial</li>
+                        <li>Kung Fu Chio</li>
+                        <li>Deportivos: pre y post competitivos</li>
+                    </ul>
+                </div>
+
+                <a href="https://wa.me/5493544640297?text=Hola%2C%20estoy%20alojado%20en%20Posada%20de%20Nono%2C%20quisiera%20agendar%20un%20turno" target="_blank" rel="noopener noreferrer" class="consult-btn" aria-label="Consultar por WhatsApp">
+                    <span class="btn-content">
+                        <span class="btn-text">Consultar</span>
+                        <i data-lucide="message-circle" class="icon"></i>
+                    </span>
                 </a>
             </div>
         </main>

@@ -334,6 +334,7 @@ main {
     margin-bottom: 8px;
     color: #2C1810;
     letter-spacing: 0.01em;
+    white-space: nowrap;
 }
 
 .badge-hot {
@@ -348,6 +349,7 @@ main {
     margin-bottom: 8px;
     color: #2C1810;
     letter-spacing: 0.01em;
+    white-space: nowrap;
 }
 
 /* Contenedor de botones de acción */
@@ -976,6 +978,116 @@ main {
         padding: 16px 28px;
         font-size: 1.1em;
     }
+}
+
+/* Estilos para sección de Bienestar y Spa */
+.massage-info {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(190, 169, 142, 0.25);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 20px 0;
+}
+
+.massage-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15em;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #2C1810;
+    letter-spacing: -0.01em;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-list li {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #2C1810;
+    padding: 6px 0 6px 24px;
+    position: relative;
+    font-weight: 400;
+}
+
+.service-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #5A6B5D;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.price-section {
+    background: rgba(212, 197, 169, 0.25);
+    border: 1px solid rgba(212, 197, 169, 0.4);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.price-note {
+    font-size: 1em;
+    color: #2C1810;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+.booking-note {
+    font-size: 0.95em;
+    color: rgba(44, 24, 16, 0.75);
+    margin: 20px 0 0 0;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+    border: 1px solid rgba(190, 169, 142, 0.2);
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Botón de consultar en Bienestar y Spa */
+.consult-btn {
+    display: block;
+    width: 100%;
+    min-height: 56px;
+    padding: 18px 24px;
+    margin: 20px 0 0 0;
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #2C1810;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(190, 169, 142, 0.25);
+    border-radius: 14px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(44, 24, 16, 0.08), 0 1px 3px rgba(44, 24, 16, 0.04);
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.consult-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(190, 169, 142, 0.35);
+    box-shadow: 0 6px 16px rgba(44, 24, 16, 0.12), 0 2px 6px rgba(44, 24, 16, 0.06);
+}
+
+.consult-btn:active {
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 2px 6px rgba(44, 24, 16, 0.1);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Optimización para pantallas muy pequeñas */
