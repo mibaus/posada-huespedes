@@ -52,6 +52,63 @@ document.addEventListener('DOMContentLoaded', function() {
                 floatingBackBtn.style.display = 'flex';
             }
         }
+
+        // Aplicar filtro predeterminado al entrar a secciones con filtro
+        const activeScreen = document.getElementById(id);
+        const zoneFilter = activeScreen.querySelector('.zone-filter');
+        if (zoneFilter) {
+            // Intentar aplicar filtro "Nono" si existe, sino mostrar "Todas"
+            const nonoBtn = activeScreen.querySelector('[data-zone-filter="nono"]');
+            const todasBtn = activeScreen.querySelector('[data-zone-filter="todas"]');
+            
+            setTimeout(() => {
+                if (nonoBtn) {
+                    // Si existe botón Nono, activarlo
+                    nonoBtn.click();
+                } else if (todasBtn) {
+                    // Si no existe Nono, activar "Todas"
+                    todasBtn.click();
+                }
+            }, 50);
+        }
+    }
+
+    // Inicializar filtros de zona
+    initZoneFilters();
+
+    function initZoneFilters() {
+        const zoneFilterBtns = document.querySelectorAll('.zone-btn');
+        
+        zoneFilterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const screen = this.closest('.screen');
+                const filterValue = this.getAttribute('data-zone-filter');
+                
+                // Actualizar estado activo de botones
+                const allBtns = screen.querySelectorAll('.zone-btn');
+                allBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filtrar cards
+                filterCards(screen, filterValue);
+            });
+        });
+    }
+
+    function filterCards(screen, zone) {
+        const cards = screen.querySelectorAll('.card[data-zone]');
+        
+        cards.forEach(card => {
+            if (zone === 'todas') {
+                card.classList.remove('hidden');
+            } else {
+                if (card.getAttribute('data-zone') === zone) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            }
+        });
     }
 });
 

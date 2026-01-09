@@ -403,82 +403,83 @@
             </button>
             <h1>Balnearios y Ríos</h1>
         </header>
+        <div class="zone-filter-container">
+            <span class="zone-filter-label">Filtrar por zona</span>
+            <div class="zone-filter">
+                <button class="zone-btn active" data-zone-filter="todas">Todas</button>
+                <button class="zone-btn" data-zone-filter="nono">Nono</button>
+                <button class="zone-btn" data-zone-filter="mina-clavero">Mina Clavero</button>
+                <button class="zone-btn" data-zone-filter="las-rabonas">Las Rabonas</button>
+                <button class="zone-btn" data-zone-filter="las-rosas">Las Rosas</button>
+            </div>
+        </div>
         <main>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>La Kiva</h2>
-                <p><span class="badge">📍 Nono</span> <span class="badge-hot">🔥 Temporada Alta</span></p>
+                <p><span class="badge-hot">🔥 Temporada Alta</span></p>
                 <p>Parador junto al río. Ideal para disfrutar en verano.</p>
                 <a href="https://maps.google.com/?q=La+Kiva+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver La Kiva en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>Librae</h2>
-                <p><span class="badge">📍 Nono</span></p>
                 <p>Río + Restaurante. Entorno natural con gastronomía.</p>
                 <a href="https://maps.google.com/?q=Librae+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Librae en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>Paso de Las Tropas</h2>
-                <p><span class="badge">📍 Nono</span></p>
                 <p>Balneario natural rodeado de vegetación.</p>
                 <a href="https://maps.google.com/?q=Paso+de+Las+Tropas+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Paso de Las Tropas en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>Los Remansos</h2>
-                <p><span class="badge">📍 Nono</span></p>
                 <p>Zona de río tranquila, perfecta para familias.</p>
                 <a href="https://maps.google.com/?q=Los+Remansos+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Los Remansos en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>Río Los Sauces y La Juntura</h2>
-                <p><span class="badge">📍 Nono</span></p>
                 <p>Punto de encuentro de ríos, paisaje único.</p>
                 <a href="https://maps.google.com/?q=Río+Los+Sauces+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Río Los Sauces en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="mina-clavero">
                 <h2>La Toma</h2>
-                <p><span class="badge">🗺️ Mina Clavero</span></p>
                 <p>Tobogán natural de piedra. Muy popular en verano.</p>
                 <a href="https://maps.google.com/?q=La+Toma+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver La Toma en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="mina-clavero">
                 <h2>Nido del Águila</h2>
-                <p><span class="badge">🗺️ Mina Clavero</span></p>
                 <p>Balneario con vistas panorámicas del valle.</p>
                 <a href="https://maps.google.com/?q=Nido+del+Águila+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Nido del Águila en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="mina-clavero">
                 <h2>Los Elefantes</h2>
-                <p><span class="badge">🗺️ Mina Clavero</span></p>
                 <p>Balneario familiar con formaciones rocosas.</p>
                 <a href="https://maps.google.com/?q=Los+Elefantes+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Los Elefantes en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="las-rabonas">
                 <h2>Valle Encantado</h2>
-                <p><span class="badge">🗺️ Las Rabonas</span></p>
                 <p>Parque acuático con toboganes y piletas.</p>
                 <a href="https://maps.google.com/?q=Valle+Encantado+Las+Rabonas" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Valle Encantado en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="las-rabonas">
                 <h2>Club de Pescadores APA I y II</h2>
-                <p><span class="badge">🗺️ Las Rabonas</span></p>
                 <p>Alquiler de botes para pesca y paseos.</p>
                 <div class="action-links">
                     <a href="https://maps.google.com/?q=Club+Pescadores+APA+Las+Rabonas" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Club de Pescadores en mapa">
@@ -486,9 +487,8 @@
                     </a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-zone="las-rosas">
                 <h2>Dique La Viña</h2>
-                <p><span class="badge">🗺️ Las Rosas</span></p>
                 <p>Paseo panorámico con vistas al embalse.</p>
                 <a href="https://maps.google.com/?q=Dique+La+Viña+Las+Rosas" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Dique La Viña en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
@@ -504,42 +504,46 @@
             </button>
             <h1>Cultura y Museos</h1>
         </header>
+        <div class="zone-filter-container">
+            <span class="zone-filter-label">Filtrar por zona</span>
+            <div class="zone-filter">
+                <button class="zone-btn active" data-zone-filter="todas">Todas</button>
+                <button class="zone-btn" data-zone-filter="nono">Nono</button>
+                <button class="zone-btn" data-zone-filter="valle-traslasierra">Valle de Traslasierra</button>
+            </div>
+        </div>
         <main>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>Museo ROCSEN</h2>
-                <p><span class="badge">📍 Nono</span> <span class="badge-hot">🤯 Imperdible</span></p>
+                <p><span class="badge-hot">🤯 Imperdible</span></p>
                 <p>Museo antropológico con más de 20.000 objetos de todo el mundo.</p>
                 <a href="https://maps.google.com/?q=Museo+ROCSEN+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Museo ROCSEN en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>Laberinto de Nono</h2>
-                <p><span class="badge">📍 Nono</span></p>
                 <p>Laberinto de ligustrina con juegos y desafíos.</p>
                 <a href="https://maps.google.com/?q=Laberinto+de+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Laberinto de Nono en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>Plaza Principal</h2>
-                <p><span class="badge">📍 Nono</span></p>
                 <p>Artesanías y shows en vivo. Temporada alta y fines de semana.</p>
                 <a href="https://maps.google.com/?q=Plaza+Principal+Nono" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Plaza Principal en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="valle-traslasierra">
                 <h2>Museo Cura Brochero</h2>
-                <p><span class="badge">🗺️ Valle de Traslasierra</span></p>
                 <p>Museo dedicado al santo cordobés. Historia y patrimonio.</p>
                 <a href="https://maps.google.com/?q=Museo+Cura+Brochero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Museo Cura Brochero en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="valle-traslasierra">
                 <h2>Los Túneles de Taninga</h2>
-                <p><span class="badge">🗺️ Valle de Traslasierra</span></p>
                 <p>Túneles históricos excavados en la montaña. Recorrido guiado.</p>
                 <a href="https://maps.google.com/?q=Túneles+de+Taninga" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Túneles de Taninga en mapa">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
@@ -555,18 +559,26 @@
             </button>
             <h1>Aventura y Naturaleza</h1>
         </header>
+        <div class="zone-filter-container">
+            <span class="zone-filter-label">Filtrar por zona</span>
+            <div class="zone-filter">
+                <button class="zone-btn active" data-zone-filter="todas">Todas</button>
+                <button class="zone-btn" data-zone-filter="nono">Nono</button>
+                <button class="zone-btn" data-zone-filter="los-hornillos">Los Hornillos</button>
+                <button class="zone-btn" data-zone-filter="valle-traslasierra">Valle de Traslasierra</button>
+                <button class="zone-btn" data-zone-filter="mina-clavero">Mina Clavero</button>
+            </div>
+        </div>
         <main>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>Cabalgatas</h2>
-                <p><span class="badge">📍 Nono</span></p>
                 <p>Paseos a caballo por las sierras. Guías experimentados.</p>
                 <a href="tel:+5493544562276" class="map-link" aria-label="Llamar para cabalgatas">
                     <i data-lucide="phone" class="icon-inline"></i> 3544 562276
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>Trekking Casita de Cristal</h2>
-                <p><span class="badge">📍 Nono</span></p>
                 <p>Trekking guiado a la icónica Casita de Cristal.</p>
                 <div class="action-links">
                     <a href="tel:+5493544687142" class="phone-link" aria-label="Llamar para trekking">
@@ -574,9 +586,8 @@
                     </a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>La Huella Turismo Aventura</h2>
-                <p><span class="badge">📍 Nono</span></p>
                 <p>Kayak, trekking y escalada. Equipamiento profesional.</p>
                 <div class="action-links">
                     <a href="tel:+5493544405328" class="phone-link" aria-label="Llamar a La Huella">
@@ -584,9 +595,8 @@
                     </a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-zone="nono">
                 <h2>Parapente - Vuelos Bautismo</h2>
-                <p><span class="badge">📍 Nono</span></p>
                 <p>Vuelos en parapente con instructores certificados.</p>
                 <div class="action-links">
                     <a href="tel:+541137979573" class="phone-link" aria-label="Llamar para parapente">
@@ -594,25 +604,22 @@
                     </a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-zone="los-hornillos">
                 <h2>Reserva Biodiversidad Nativa</h2>
-                <p><span class="badge">🗺️ Los Hornillos</span></p>
                 <p>Reserva natural con paseos y senderismo. Flora y fauna nativa.</p>
                 <a href="https://maps.google.com/?q=Reserva+Biodiversidad+Nativa+Los+Hornillos" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver reserva">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="valle-traslasierra">
                 <h2>Cascada del Toro Muerto</h2>
-                <p><span class="badge">🗺️ Valle de Traslasierra</span></p>
                 <p>Cascada natural. Trekking de dificultad media.</p>
                 <a href="https://maps.google.com/?q=Cascada+Toro+Muerto+Traslasierra" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver cascada">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="mina-clavero">
                 <h2>RAF Turismo</h2>
-                <p><span class="badge">🗺️ Mina Clavero</span></p>
                 <p>Paseos, traslados al aeropuerto y alquiler de bicicletas.</p>
                 <div class="action-links">
                     <a href="tel:+5493544444290" class="phone-link" aria-label="Llamar a RAF Turismo">
@@ -630,27 +637,36 @@
             </button>
             <h1>Gastronomía y Bodegas</h1>
         </header>
+        <div class="zone-filter-container">
+            <span class="zone-filter-label">Filtrar por zona</span>
+            <div class="zone-filter">
+                <button class="zone-btn active" data-zone-filter="todas">Todas</button>
+                <button class="zone-btn" data-zone-filter="las-rosas">Las Rosas</button>
+                <button class="zone-btn" data-zone-filter="las-rabonas">Las Rabonas</button>
+                <button class="zone-btn" data-zone-filter="valle-traslasierra">Valle de Traslasierra</button>
+            </div>
+        </div>
         <main>
-            <div class="card">
+            <div class="card" data-zone="las-rosas">
                 <h2>Fábrica OLIUM</h2>
-                <p><span class="badge">🗺️ Las Rosas</span> <span class="badge">💎 Premium</span></p>
+                <p><span class="badge">💎 Premium</span></p>
                 <p>Tour guiado por la fábrica de aceites de oliva premium. Incluye degustación de productos y tienda. Ideal para amantes de la gastronomía.</p>
                 <p><strong>Reserva:</strong> Recomendada</p>
                 <a href="https://maps.google.com/?q=OLIUM+Las+Rosas+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver OLIUM">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="las-rabonas">
                 <h2>Eben Ezer</h2>
-                <p><span class="badge">🗺️ Las Rabonas</span> <span class="badge">🏺 Artesanal</span> <span class="badge-hot">🍾 Tradicional</span></p>
+                <p><span class="badge">🏺 Artesanal</span> <span class="badge-hot">🍾 Tradicional</span></p>
                 <p>Licorería artesanal con más de 50 años de historia. Degustación de licores caseros elaborados con recetas familiares. Ambiente auténtico y acogedor.</p>
                 <a href="https://maps.google.com/?q=Eben+Ezer+Las+Rabonas" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Eben Ezer">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="valle-traslasierra">
                 <h2>Ruta del Vino</h2>
-                <p><span class="badge">🗺️ Valle de Traslasierra</span> <span class="badge">🍷 Vinos</span> <span class="badge">🚗 Día completo</span></p>
+                <p><span class="badge">🍷 Vinos</span> <span class="badge">🚗 Día completo</span></p>
                 <p>Circuito turístico por las principales bodegas del valle. Incluye catas de vinos, maridajes y visitas a viñedos. Paisajes espectaculares de las sierras.</p>
                 <p><strong>Recomendación:</strong> Contratar tour con transporte | <strong>Duración:</strong> 4-6 horas</p>
                 <a href="https://maps.google.com/?q=Ruta+del+Vino+Traslasierra" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Ruta del Vino">
@@ -667,43 +683,48 @@
             </button>
             <h1>Entretenimiento</h1>
         </header>
+        <div class="zone-filter-container">
+            <span class="zone-filter-label">Filtrar por zona</span>
+            <div class="zone-filter">
+                <button class="zone-btn active" data-zone-filter="todas">Todas</button>
+                <button class="zone-btn" data-zone-filter="las-rosas">Las Rosas</button>
+                <button class="zone-btn" data-zone-filter="valle-traslasierra">Valle de Traslasierra</button>
+                <button class="zone-btn" data-zone-filter="mina-clavero">Mina Clavero</button>
+            </div>
+        </div>
         <main>
-            <div class="card">
+            <div class="card" data-zone="las-rosas">
                 <h2>Feria de Las Rosas</h2>
-                <p><span class="badge">🗺️ Las Rosas</span></p>
                 <p>Sábados de 11 a 17 hs. En julio y verano: jueves y sábados. Artesanías y productos regionales.</p>
                 <a href="https://maps.google.com/?q=Feria+Las+Rosas+Córdoba" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Feria Las Rosas">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="valle-traslasierra">
                 <h2>Granja El Encanto</h2>
-                <p><span class="badge">🗺️ Valle de Traslasierra</span> <span class="badge">👨‍👩‍👧 Familiar</span> <span class="badge">⏱️ 2-3 hs</span></p>
+                <p><span class="badge">👨‍👩‍👧 Familiar</span> <span class="badge">⏱️ 2-3 hs</span></p>
                 <p>Granja didáctica con animales de granja. Los niños pueden interactuar con animales, aprender sobre la vida rural y disfrutar de actividades al aire libre.</p>
                 <p><strong>Ideal para:</strong> Familias con niños</p>
                 <a href="https://maps.google.com/?q=Granja+El+Encanto+Traslasierra" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver ubicación">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="mina-clavero">
                 <h2>Bowling</h2>
-                <p><span class="badge">🗺️ Mina Clavero</span></p>
                 <p>Bowling moderno para toda la familia.</p>
                 <a href="https://maps.google.com/?q=Bowling+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Bowling">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="mina-clavero">
                 <h2>Cine y Teatro Milac Navira</h2>
-                <p><span class="badge">🗺️ Mina Clavero</span></p>
                 <p>Cine y teatro con cartelera actualizada.</p>
                 <a href="https://maps.google.com/?q=Cine+Teatro+Milac+Navira+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Cine Teatro">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
                 </a>
             </div>
-            <div class="card">
+            <div class="card" data-zone="mina-clavero">
                 <h2>Casino</h2>
-                <p><span class="badge">🗺️ Mina Clavero</span></p>
                 <p>Casino con juegos de azar y entretenimiento nocturno.</p>
                 <a href="https://maps.google.com/?q=Casino+Mina+Clavero" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Ver Casino">
                     <i data-lucide="map-pin" class="icon-inline"></i> Ver ubicación
