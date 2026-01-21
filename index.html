@@ -80,6 +80,12 @@
                     <i data-lucide="sparkles" class="icon"></i>
                 </span>
             </button>
+            <button class="action-btn" data-target="biblioteca" aria-label="Biblioteca y Juegos">
+                <span class="btn-content">
+                    <span class="btn-text">Biblioteca y Juegos</span>
+                    <i data-lucide="book-open" class="icon"></i>
+                </span>
+            </button>
             <button class="action-btn" data-target="servicios" aria-label="Servicios útiles">
                 <span class="btn-content">
                     <span class="btn-text">Servicios útiles</span>
@@ -809,6 +815,64 @@
                         <i data-lucide="message-circle" class="icon"></i>
                     </span>
                 </a>
+            </div>
+        </main>
+    </div>
+
+    <div id="biblioteca" class="screen">
+        <header>
+            <button class="back-btn" aria-label="Volver">
+                <i data-lucide="arrow-left" class="icon-back"></i>
+            </button>
+            <h1>Biblioteca y Juegos</h1>
+        </header>
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="libros">
+                    <i data-lucide="book-open" class="tab-icon"></i>
+                    <span>Libros</span>
+                </button>
+                <button class="tab-btn" data-tab="juegos">
+                    <i data-lucide="puzzle" class="tab-icon"></i>
+                    <span>Juegos de Mesa</span>
+                </button>
+            </div>
+        </div>
+        <main>
+            <div id="libros-content" class="tab-content active">
+                <div class="biblioteca-grid">
+                    <div class="biblioteca-item">
+                        <div class="item-image-placeholder">
+                            <i data-lucide="book" class="placeholder-icon"></i>
+                        </div>
+                        <div class="item-info">
+                            <h3 class="item-title">Cien años de soledad</h3>
+                            <p class="item-author">Gabriel García Márquez</p>
+                        </div>
+                        <button class="item-request-btn" onclick="solicitarItem('Cien años de soledad', 'libro')">
+                            <i data-lucide="message-circle" class="btn-icon-small"></i>
+                            <span>Consultar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="juegos-content" class="tab-content">
+                <div class="biblioteca-grid">
+                    <div class="biblioteca-item">
+                        <div class="item-image-placeholder">
+                            <i data-lucide="puzzle" class="placeholder-icon"></i>
+                        </div>
+                        <div class="item-info">
+                            <h3 class="item-title">Bingo</h3>
+                            <p class="item-author">2-20 jugadores · 30 min</p>
+                        </div>
+                        <button class="item-request-btn" onclick="solicitarItem('Bingo', 'juego')">
+                            <i data-lucide="message-circle" class="btn-icon-small"></i>
+                            <span>Consultar</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </main>
     </div>

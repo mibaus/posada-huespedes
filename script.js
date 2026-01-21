@@ -110,6 +110,39 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Inicializar tabs de biblioteca
+    initBibliotecaTabs();
+
+    function initBibliotecaTabs() {
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                const screen = this.closest('.screen');
+                
+                // Actualizar estado activo de botones
+                const allTabBtns = screen.querySelectorAll('.tab-btn');
+                allTabBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Mostrar contenido correspondiente
+                const allTabContents = screen.querySelectorAll('.tab-content');
+                allTabContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                const targetContent = screen.querySelector(`#${targetTab}-content`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+                
+                // Reinicializar iconos de Lucide
+                lucide.createIcons();
+            });
+        });
+    }
 });
 
 // Función para copiar al portapapeles
@@ -165,4 +198,15 @@ function showCopyFeedback(button) {
         lucide.createIcons();
         button.classList.remove('copied');
     }, 2000);
+}
+
+// Función para solicitar libros o juegos de mesa
+function solicitarItem(nombre, tipo) {
+    const tipoTexto = tipo === 'libro' ? 'el libro' : 'el juego';
+    const mensaje = `Hola, soy huésped de Posada de Nono. Me gustaría solicitar ${tipoTexto} "${nombre}". ¿Está disponible?`;
+    const mensajeCodificado = encodeURIComponent(mensaje);
+    const numeroWhatsApp = '5493516178200';
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+    
+    window.open(urlWhatsApp, '_blank');
 }
